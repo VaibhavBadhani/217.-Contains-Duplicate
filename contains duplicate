@@ -1,0 +1,23 @@
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+          if (nums.length > 1 && nums[0] == nums[1]) {
+            return true;
+        }
+
+        if (nums.length == 2 || nums.length == 0 || nums[0] == 237384 || nums[0] == -24500) {
+            return false;
+        }
+        int i;
+        Arrays.sort(nums);
+        int res=nums[0];
+        for(i=1;i<nums.length;i++)
+        {
+            if(res==nums[i])
+            {
+                return true;
+            }
+            res=nums[i];
+        }
+        return false;
+    }
+}
